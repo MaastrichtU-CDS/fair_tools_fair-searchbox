@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>FAIR Searchbox</title>
+    </head>
+
+    <body>
+        <h2>Zoeken</h2>
+        <form method="POST">
+            <input type="text" name="searchField" id="searchField", value="{{ searchTerm }}"/>
+            <input type="submit" value="Search!"/>
+        </form>
+
+        <h2>Results</h2>
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Comment</th>
+                <th>Location</th>
+            </tr>
+            {% for term in termList %}
+            <tr>
+                <td><a href="./?uri={{ term.class }}">{{ term.classLabel }}</a></td>
+                <td>{{ term.classComment }}</td>
+                <td>{{ term.classLocation }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
