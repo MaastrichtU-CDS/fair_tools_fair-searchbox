@@ -1,0 +1,2134 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.vektis.nl/intelligence/open-data/ontologie#"
+     xml:base="https://www.vektis.nl/intelligence/open-data/ontologie"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologie="https://www.vektis.nl/intelligence/open-data/ontologie/">
+    <owl:Ontology rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie">
+        <owl:versionIRI rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/2019/1"/>
+        <rdfs:label>Vektis Open Databestanden</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie#Contains -->
+
+    <owl:AnnotationProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie#Contains"/>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie#bevat_BASIC_code -->
+
+    <owl:AnnotationProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie#bevat_BASIC_code"/>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie#valt_onder_ZINL_kostencode -->
+
+    <owl:AnnotationProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie#valt_onder_ZINL_kostencode"/>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data_Locatie -->
+
+    <owl:AnnotationProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data_Locatie">
+        <rdfs:label>Kolomnaam</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/p10 -->
+
+    <owl:ObjectProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/p10">
+        <rdfs:domain rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B0"/>
+        <rdfs:range rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:label>Bevat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/P2 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/P2">
+        <rdfs:comment>Het jaar waarin de kosten zijn gemaakt.
+In het geval van DBC kosten, is dit het jaar waarin de DBC is geopend.</rdfs:comment>
+        <rdfs:label>Kostenjaar</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/p1 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/p1">
+        <rdfs:domain rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B0"/>
+        <rdfs:comment>URL naar daadwerkelijk bestand op de Vektis website</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Bestandslocatie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/p3 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/p3">
+        <rdfs:domain rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B0"/>
+        <rdfs:comment>Datum waarin het bestand op de betreffende URL is gemaakt.</rdfs:comment>
+        <rdfs:label>Aanmaakdatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/B0 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/B0">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data"/>
+        <rdfs:label>Bestand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/B1 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/B1">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B0"/>
+        <rdfs:label>gemeenteniveau</rdfs:label>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K01"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K02"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K03"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K04"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K05"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K06"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K07"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K08"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K09"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K10"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K11"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K12"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K13"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K14"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K15"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K17"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K18"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K19"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K20"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K21"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K22"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K23"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V01"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V05"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V06"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02/02"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03/02"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/B2 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/B2">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B0"/>
+        <rdfs:comment>Eerste drie posities van de postcode</rdfs:comment>
+        <rdfs:label>postcode3-niveau</rdfs:label>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K01"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K02"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K03"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K04"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K05"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K06"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K07"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K08"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K09"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K10"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K11"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K12"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K13"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K14"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K15"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K17"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K18"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K19"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K20"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K21"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K22"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K23"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V01"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V05"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V06"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02/01"/>
+        <Contains rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03/01"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst"/>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K0 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K0">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data"/>
+        <rdfs:label>Kosten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K01 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K01">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- kosten en honoraria van DBC-zorgproducten gereguleerde en vrije segment;
+- kosten van add-ons;
+- kosten en honoraria specialisten voor mondziekten en kaakchirurgie;
+- kosten en honoraria extramuraal werkende specialisten;
+- overige kosten ziekenhuiszorg en curatieve zorg;
+- overige zorgproducten.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+        <rdfs:label>Medisch-specialistische zorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_MEDISCH_SPECIALISTISCHE_ZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K02 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K02">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van farmaceutische hulp, inclusief honoraria en praktijkkosten apothekers, moduletarief farmaceutische hulp door apotheekhoudende huisartsen en moduletarief scheiden van zorg en handel.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1201"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1202"/>
+        <rdfs:label>Farmacie</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_FARMACIE</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K03 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K03">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- kosten van DBC’s GGZ met verblijf (al dan niet met behandeling);
+- kosten van DBC’s GGZ zonder verblijf: kosten van instellingen;
+- kosten van DBC’s GGZ zonder verblijf: kosten van zelfstandig gevestigden.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1852"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1853"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1854"/>
+        <rdfs:label>Specialistische GGZ</rdfs:label>
+        <rdfs:label>Tweedelijns-GGZ</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_SPECIALISTISCHE_GGZ</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K04 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K04">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van inschrijftarieven huisartsen, inclusief een eventuele opslag voor digitaal declareren, exclusief moduletarief farmaceutische hulp apotheekhoudende huisartsen en moduletarief scheiden van zorg en handel.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1106"/>
+        <rdfs:label>Huisartseninschrijftarief</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_HUISARTS_INSCHRIJFTARIEF</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K05 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K05">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van consulttarieven huisartsen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1107"/>
+        <rdfs:label>Huisartsconsult</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_HUISARTS_CONSULT</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K06 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K06">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden over 2015 en 2016.
+Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- multidisciplinaire zorg;
+- resultaatbeloning en zorgvernieuwing huisartsen;
+- resultaatbeloning en zorgvernieuwing multidisciplinaire zorg;
+- overige tarieven.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1110"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1113"/>
+        <rdfs:label>Huisarts multidisciplinaire zorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_HUISARTS_MDZ</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K07 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K07">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- kosten module praktijkondersteuning huisartsen (POH);
+- kosten module praktijkondersteuning huisartsen (POH) GGZ;
+- kosten achterstandsfonds;
+- kosten module modernisering en innovatie;
+- kosten overige tarieven huisartsenhulp (waaronder passantentarieven);
+- kosten avond-, nacht- en weekenddiensten (ANW).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1102"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1103"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1105"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1108"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1109"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1112"/>
+        <rdfs:label>Kosten huisarts overig</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_HUISARTS_OVERIG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K08 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K08">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van hulpmiddelen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1701"/>
+        <rdfs:label>Hulpmiddelen</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_HULPMIDDELEN</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K09 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K09">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van mondzorg: kosten mondzorg volwassen en jeugdige verzekerden, gebitsprothesen en bijzondere betalingen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1302"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1303"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1304"/>
+        <rdfs:label>Mondzorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_MONDZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K10 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K10">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van fysiotherapie.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1601"/>
+        <rdfs:label>Paramedische zorg - fysiotherapie</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_PARAMEDISCHE_ZORG_FYSIOTHERAPIE</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K11 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K11">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- kosten van oefentherapie cesar/mensendieck;
+- kosten van logopedie;
+- kosten van ergotherapie.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1602"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1603"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1604"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1605"/>
+        <rdfs:label>Paramedische zorg - overig</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_PARAMEDISCHE_ZORG_OVERIG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K12 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K12">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van vervoer per taxi, openbaar vervoer en eigen auto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1802"/>
+        <rdfs:label>Ziekenvervoer zittend</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_ZIEKENVERVOER_ZITTEND</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K13 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K13">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van vervoer per ambulance of helikopter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1801"/>
+        <rdfs:label>Ziekenvervoer liggend</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_ZIEKENVERVOER_LIGGEND</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K14 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K14">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van kraamzorg</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1901"/>
+        <rdfs:label>Kraamzorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_KRAAMZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K15 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K15">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van verloskundige hulp door verloskundigen en huisartsen. Een verandering in de wijze waarop verloskundige declaraties worden geboekt, kan op regionaal niveau zorgen voor kostenverschuivingen tussen 2013 en 2014.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1401"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1402"/>
+        <rdfs:label>Verloskundige zorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_VERLOSKUNDIGE_ZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K17 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K17">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden over 2014, 2015 en 2016.
+Kosten van generalistische basis GGZ.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1857"/>
+        <rdfs:label>Generalistische basis-GGZ</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_GENERALISTISCHE_BASIS_GGZ</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K18 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K18">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden over 2015 en 2016.
+Kosten van langdurige GGZ.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1858"/>
+        <rdfs:label>Langdurige GGZ</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_LANGDURIGE_GGZ</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K19 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K19">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- kosten voor ziekenhuisverpleging en specialistische hulp in het buitenland;
+- kosten van geneeskundige zorg in het buitenland gericht op herstel van een psychiatrische aandoening en kosten van verblijf voor zover deze horen bij deze zorg;
+- kosten voor overige prestaties in het buitenland.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2005"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2006"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2007"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2008"/>
+        <rdfs:label>Grensoverschrijdende Zorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_GRENSOVERSCHIJDENDE_ZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K20 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K20">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Kosten van ondersteuning eerstelijnszorg.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2101"/>
+        <rdfs:label>Eerstelijnsondersteuning</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_EERSTELIJNS_ONDERSTEUNING</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K21 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K21">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden over 2013, 2014, 2015 en 2016.
+Kosten van geriatrische revalidatiezorg.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1880"/>
+        <rdfs:label>Geriatrische revalidatiezorg</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_GERIATRISCHE_REVALIDATIEZORG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K22 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K22">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden over 2015 en 2016.
+Kosten van verpleging en verzorging.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1251"/>
+        <rdfs:label>Verpleging en verzorging</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_VERPLEGING_EN_VERZORGING</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/K23 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K23">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/K0"/>
+        <rdfs:comment>Deze kostenrubriek bevat het totaal van de volgende kostensoorten:
+- ketenzorg (beleidsregel multidisciplinaire zorg voor chronische aandoeningen – tot en met 2014);
+- zorg zintuiglijk gehandicapten (vanaf 2015);
+- overige kosten ziekenhuiszorg en specialistische hulp;
+- overige geneeskundige zorg;
+- overige kosten overige prestaties;
+- overige kosten die niet nader te specificeren zijn.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2304"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2305"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2306"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2307"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2308"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2309"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2310"/>
+        <rdfs:label>Overig</rdfs:label>
+        <ontologie:Open_Data_Locatie>KOSTEN_OVERIG</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data">
+        <rdfs:comment>De databestanden zijn samengesteld uit de bestandsaanleveringen van alle zorgverzekeraars. Deze
+bestandsaanleveringen worden door Vektis zorgvuldig gecontroleerd. Eventuele geconstateerde
+fouten worden altijd teruggekoppeld aan de betreffende verzekeraar met een verzoek om een
+nieuwe aanlevering van de betreffende data. Vektis voert zelf geen correcties uit. Dit heeft onder
+andere tot gevolg dat de databestanden ook negatieve bedragen bevat ten. Dit kunnen correcties
+zijn van uitbetaalde kosten over een eerder jaar die een verzekeraar in een later jaar heeft
+doorgevoerd.
+
+Uit de bestandsaanleveringen van de verzekeraars zijn bronbestanden samengesteld die vervolgens
+zijn geaggregeerd tot bestanden met minimaal 10 achterliggende personen per datarecord. In het
+datawarehouse van Vektis komen geen burgerservicenummers (BSN’s) en volledige adresgegevens
+voor en in de databron voor het maken van de open databestanden is geen gebruikgemaakt van
+volledige geboortedata.
+De databestanden bevatten gesommeerde kosten, verzekerdenaantallen en verzekerdejaren voor
+alle unieke combinaties van de verzekerdenkenmerken geslacht, leeftijdsklasse en postcode3 of
+gemeente. Nu komt het voor dat er combinaties van verzekerdenkenmerken zijn waarbij het
+gesommeerde verzekerdenaantal kleiner is dan 10.
+In de bestanden op postcode3-niveau is in die gevallen als volgt gehandeld:
+1) In eerste instantie is de postcode op ‘000’ gezet (zie ook paragraaf 3.2 onder het kopje
+‘Postcode_3’).
+2) Indien er bij de resterende combinaties (van leeftijd en geslacht) nog steeds sprake is van
+minder dan 10 personen, zijn de bijbehorende verzekerdenaantallen, verzekerdejaren en
+kosten opgeteld zodat deze gezamenlijk één restcategorie vormen waarvan de kenmerken
+ontbreken.
+In de bestanden op gemeenteniveau is stap 1 overgeslagen en zijn records met minder dan 10
+achterliggende personen dus direct aan de restcategorie toegekend. De restcategorie is in de
+databestanden te herkennen aan de lege cellen bij geslacht, leeftijdsklasse en postcode3 of
+gemeente. Ook bevat deze restcategorie de verzekerdenaantallen, verzekerdejaren en kosten van
+verzekerden waarvan een of meer persoonskenmerken (geslacht, leeftijd, postcode of gemeente)
+onbekend zijn in de brongegevens.
+Het hanteren van een minimum aantal van 10 personen moet voorkomen dat informatie in de
+databestanden leidt tot onthulling van gegevens over individuele personen. Verder staat in de
+databestanden geen informatie die is te herleiden tot individuele zorgverzekeraars.</rdfs:comment>
+        <rdfs:label>Vektis Open Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V0 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V0">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Open_Data"/>
+        <rdfs:label>Verzekerden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V01 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V01">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V0"/>
+        <rdfs:comment>‘M’ betreft mannen en ‘V’ betreft vrouwen.</rdfs:comment>
+        <rdfs:label>Geslacht</rdfs:label>
+        <ontologie:Open_Data_Locatie>GESLACHT</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V02 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V02">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V0"/>
+        <rdfs:comment>Leeftdijdsklasse van de verzekerde
+De leeftijd van verzekerden is gepeild op 31 december van het betreffende jaar.
+De leeftijden van 90 jaar en hoger zijn gegroepeerd in de klasse 90+.</rdfs:comment>
+        <rdfs:label>Leeftijdsklasse</rdfs:label>
+        <ontologie:Open_Data_Locatie>LEEFTIJDSKLASSE</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V03 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V03">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V0"/>
+        <rdfs:comment>Ruimtelijk niveau van de woonlocatie</rdfs:comment>
+        <rdfs:label>Woonlocatieniveau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V05 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V05">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V0"/>
+        <rdfs:comment>Aantal_BSN staat voor het aantal unieke verzekerden in het betreffende jaar voor de betreffende combinatie van verzekerdenkenmerken (geslacht, leeftijdsklasse en postcode3 of gemeente).</rdfs:comment>
+        <rdfs:label>Aantal BSN</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V01"/>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02"/>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03"/>
+        <ontologie:Open_Data_Locatie>AANTAL_BSN</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V06 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V06">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V0"/>
+        <rdfs:comment>Aantal_verzekerdejaren betreft het aantal verzekerden gewogen naar de inschrijfduur in het betreffende jaar voor de betreffende combinatie van verzekerdenkenmerken. Aantal_verzekerdejaren is een wegingsfactor die het mogelijk maakt zorgkosten in verschillende regio’s of verschillende leeftijdsklassen te vergelijken ongeacht de aantallen nieuw geborenen, overledenen of verhuisde verzekerden. De berekening van het aantal verzekerdejaren is gebaseerd op de verhouding tussen het aantal dagen van een kalenderjaar dat iemand verzekerd was en het aantal dagen van het betreffende kalenderjaar. Iemand die alle dagen van een kalenderjaar ingeschreven is geweest voor de basisverzekering, heeft een aantal verzekerdejaren gelijk aan 1. Een verzekerde die korter ingeschreven is geweest, heeft een aantal verzekerdejaren kleiner dan 1.
+
+Op dezelfde manier drukt het aantal verzekerdejaren de woonduur uit van een verzekerde in een postcodegebied of gemeente.
+
+Een fictief voorbeeld:
+- In regio A wonen 8.000 verzekerden met samen 8.000 verzekerdejaren; iedereen is dus het hele jaar ingeschreven geweest. Deze verzekerden hebben gezamenlijke zorgkosten van €1.000.000,-. Gemiddeld hebben zij €125,- kosten per verzekerdenjaar.
+- In regio B wonen ook 8.000 verzekerden met samen slechts 4.000 verzekerdejaren; de gemiddelde inschrijfduur van deze verzekerden is dus een half jaar. Ook zij hebben gezamenlijke zorgkosten van €1.000.000,-. Gemiddeld hebben zij echter €250,- kosten per verzekerdenjaar.
+
+Vergelijking van de gemiddelde kosten per verzekerde op basis van aantal_verzekerden zou de conclusie opleveren dat in beide regio’s evenveel kosten worden gemaakt. Bij gebruik van verzekerdejaren, en dus rekening houdend met de inschrijfduur, blijken de gemiddelde kosten in regio B 2 keer zo hoog te zijn als de gemiddelde kosten in regio A.</rdfs:comment>
+        <rdfs:label>Aantal verzekerdejaren</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V01"/>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02"/>
+        <rdfs:seeAlso rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03"/>
+        <ontologie:Open_Data_Locatie>AANTAL_VERZEKERDEJAREN</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1101 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1101">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten module praktijkondersteuning</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/503"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1102 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1102">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten module populatiegebonden vergoedingen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/503"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1103 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1103">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten module modernisering en innovatie (inclusief RIZ-tarieven)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/503"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1104 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1104">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten overige tarieven huisartsenhulp (waaronder passantentarieven)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/503"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1105 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1105">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten huisartsendienstenstructuren (ANW)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/504"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1106 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1106">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten inschrijftarief (exclusief moduletarief farmaceutisch)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/505"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1107 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1107">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten consulttarieven huisartsen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/506"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1108 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1108">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten module praktijkondersteuning GGZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/507"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1109 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1109">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten overige tarieven (Huisartsenzorg)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/507"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1110 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1110">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten multidisciplinaire zorg (Huisartsenzorg)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/510"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1112 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1112">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten resultaatbeloning en zorgvernieuwing huisartsen (Huisartsenzorg)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/515"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1113 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1113">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten resultaatbeloning en zorgvernieuwing MDZ (Huisartsenzorg)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/516"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1201 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1201">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten farmaceutische zorg (exclusief moduletarief farmaceutisch)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/520"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1202 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1202">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten moduletarief farmaceutische zorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/520"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1251 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1251">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten van verpleging en verzorging (Verpleging en Verzorging)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/530"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten mondzorg totaal</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.1"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.2"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/561"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/562"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1302 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1302">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten mondzorg volwassen verzekerden</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.1"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1303 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1303">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten mondzorg jeugdige verzekerden</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.2"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1304 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1304">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten mondzorg gebitsprothesen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/561"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1305 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1305">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Bijzondere betalingen mondzorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/562"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1401 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1401">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten verloskundige zorg door verloskundigen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/580"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1402 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1402">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten verloskundige zorg door huisarts</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/581"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten medisch specialistische hulp door of vanwege het ziekenhuis</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/545"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/610"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/611"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/612"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/612.1"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/612.2"/>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/613"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1601 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1601">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten fysiotherapie</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/620"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1602 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1602">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten oefentherapie cesar/mensendieck</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/621"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1603 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1603">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten logopedie</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/623"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1604 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1604">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten ergotherapie</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/624"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1605 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1605">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten (extramurale) dieetadvisering</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/625"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1701 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1701">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten hulpmiddelenzorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/640"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1801 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1801">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten vervoer per ambulance/helikopter</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/650"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1802 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1802">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten vervoer per taxi, openbaar vervoer en eigen auto</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/651"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1803 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1803">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Opbrengstverrekeningen regionale ambulancevoorzieningen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/650.1"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1851 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1851">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten eerstelijnspsychologische zorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/660"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1852 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1852">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten DBC&apos;s GGZ met verblijf</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/661"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1853 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1853">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten DBC&apos;s GGZ zonder verblijf; kosten instellingen</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/662"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1854 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1854">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten DBC&apos;s GGZ zonder verblijf; kosten zelfstandig gevestigden</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/662"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1855 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1855">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten PGB&apos;s GGZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/663"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1856 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1856">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten overige producten GGZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/664"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1857 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1857">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Generalistische basis GGZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/665"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1858 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1858">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten LGGZ (langdurige GGZ, jaar 2 en 3) (GGZ)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/661.1"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1880 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1880">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten geriatrische revalidatiezorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/670"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1881 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1881">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten eerstelijnsverblijf</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/671"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1901 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1901">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten kraamzorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/680"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2001 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2001">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten ziekenhuisverpleging (en specialistische hulp) buiten Nederland</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2002 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2002">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten voor overige prestaties buiten Nederland</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2003 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2003">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten GGZ buiten Nederland</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2005 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2005">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Grensoverschrijdende zorg, kosten ziekenhuiszorg via zorgverzekeraar</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2006 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2006">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Grensoverschrijdende zorg, kosten GGZ via zorgverzekeraar</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2007 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2007">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Grensoverschrijdende zorg, overige kosten via zorgverzekeraar</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/720"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2008 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2008">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Grensoverschrijdende zorg, kosten via CVZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/721"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2101 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2101">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten van ondersteuning eerstelijn</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/730"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2201 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2201">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Teruggave no-claim</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2301 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2301">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Ziekenhuiszorg en specialistische hulp</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2302 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2302">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Overige prestaties</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2303 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2303">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Niet nader te specificeren kosten</rdfs:label>
+        <rdfs:label>Overige kosten - Niet nader te specificeren kosten (tot 1-1-2007)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2304 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2304">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Beleidsregels eerstelijnszorg en innovatie - Ziekenhu</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2305 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2305">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Beleidsregels eerstelijnszorg en innovatie - Overige</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2306 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2306">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Kosten beleidsregel geintegreerde eerstelijnszorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2307 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2307">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Niet nader te specificeren kosten (vanaf 1-1-2007)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2308 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2308">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige kosten - Beleidsregel innovatie - Kosten GGZ</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/700"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2309 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2309">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Overige geneeskundige zorg</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/701"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2310 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2310">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten van zorg zintuiglijk gehandicapten (Overige kosten)</rdfs:label>
+        <valt_onder_ZINL_kostencode rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode/702"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5201 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5201">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten farmaceutische zorg via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5301 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5301">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten mondzorg via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5401 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5401">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten geboortezorg via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5501 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5501">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten medisch specialistische hulp ziekenhuis via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5601 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5601">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten fysiotherapie of oefentherapie via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5701 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5701">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten hulpmiddelenzorg via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5801 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/5801">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten ziekenvervoer via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6001 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6001">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten zorg in het buitenland via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6101 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6101">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten orthodontie via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6201 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6201">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten alternatieve geneesmiddelen en geneeswijzen via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6301 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/6301">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic"/>
+        <rdfs:label>Kosten overige vergoedingen via de AV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V02/01 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V02/01">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02"/>
+        <rdfs:comment>In de bestanden op postcode3-niveau is leeftijd opgenomen als eenjarige klassen, waarbij de leeftijden van 90 jaar en hoger gegroepeerd zijn in de klasse 90+.</rdfs:comment>
+        <rdfs:label>Leeftijdsklasse 1-jaarsgroepen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V02/02 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V02/02">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V02"/>
+        <rdfs:comment>In de bestanden op gemeenteniveau is leeftijd opgenomen als vijfjarige klassen; ook hierbij zijn de leeftijden van 90 jaar en hoger gegroepeerd in de klasse 90+.</rdfs:comment>
+        <rdfs:label>Leeftijdsklasse 5-jaarsgroepen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V03/01 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V03/01">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden op postcode3-niveau.
+Dit betreft de eerste 3 cijfers van de postcode. Daarnaast is waarde &apos;000&apos; toegekend aan verzekerden die wonen in een gebied dat zodanig klein is dat het opnemen van de werkelijke postcode3-waarde in de databestanden zou kunnen resulteren in herleidbaarheid naar individuele verzekerden. Door het omzetten van postcode3 naar de waarde ‘000’ worden dergelijke verzekerden gegroepeerd.</rdfs:comment>
+        <rdfs:label>Postcode 3</rdfs:label>
+        <ontologie:Open_Data_Locatie>POSTCODE_3</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/V03/02 -->
+
+    <owl:Class rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/V03/02">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/V03"/>
+        <rdfs:comment>Dit gegeven komt alleen voor in de bestanden op gemeenteniveau.
+Dit betreft de naam van de gemeente volgens de gemeentelijke indeling in 2018.</rdfs:comment>
+        <rdfs:label>Gemeentenaam</rdfs:label>
+        <ontologie:Open_Data_Locatie>GEMEENTENAAM</ontologie:Open_Data_Locatie>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode">
+        <rdfs:subClassOf rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/503 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/503">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Bijzondere betalingen</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1101"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1102"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1103"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1104"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/504 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/504">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Avond-, nacht- en weekenddiensten</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1105"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/505 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/505">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Inschrijftarieven</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1106"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/506 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/506">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Consulttarieven</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1107"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/507 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/507">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Overige tarieven</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1108"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1109"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/510 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/510">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Multidisciplinaire zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1110"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/515 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/515">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Resultaatbeloning en zorgvernieuwing huisartsen</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1112"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/516 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/516">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Resultaatbeloning en zorgvernieuwing MDZ</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1113"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/520 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/520">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van farmaceutische zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1201"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1202"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/530 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/530">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van verpleging en verzorging</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1251"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/545 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/545">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten specialisten voor mondziekten en kaakchirurgie</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/560.1 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.1">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten mondzorg voor volwassen verzekerden</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1302"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/560.2 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/560.2">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten mondzorg voor jeugdige verzekerden</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1303"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/561 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/561">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van gebitsprothesen</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1304"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/580 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/580">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten verloskundige zorg door verloskundigen</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1401"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/581 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/581">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten verloskundige zorg door huisartsen</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1402"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/610 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/610">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Overige kosten ziekenhuiszorg en curatieve zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/611 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/611">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Overige zorgproducten</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/612 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/612">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten Add-on&apos;s</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/613 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/613">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten DBC-zorgproduct gereguleerde segment</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/613.1 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/613.1">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Integrale kosten DBC-zorgproduct gereguleerde segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/614 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/614">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Honoraria DBC-zorgproduct gereguleerde segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/615 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/615">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten DBC-zorgproduct vrije segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/615.1 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/615.1">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Integrale kosten DBC-zorgproduct vrije segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/616 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/616">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Honoraria DBC-zorgproduct vrije segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/617 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/617">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten en honoraria van ondersteunende en overige producten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/618 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/618">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten en honoraria overige trajecten en verrichtingen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/619 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/619">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Integrale kosten extramuraal werkende specialisten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/620 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/620">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van fysiotherapie</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1601"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/621 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/621">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van oefentherapie Mensendieck/Cesar</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1602"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/623 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/623">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van logopedie</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1603"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/624 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/624">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van ergotherapie</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1604"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/625 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/625">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van dieetadvisering</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1605"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/640 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/640">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van hulpmiddelenzorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1701"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/650 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/650">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van vervoer per ambulance/helikopter</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1801"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/651 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/651">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van vervoer per openbaar vervoer, taxi en eigen auto</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1802"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/660 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/660">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten eerstelijnspsychologische zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1851"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/661 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/661">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van specialistische GGZ met verblijf (1 jr)</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1852"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/661.1 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/661.1">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten langdurige GGZ (jaar 2 en 3 van verblijf)</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1858"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/662 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/662">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van specialistische GGZ zonder verblijf</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1853"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1854"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/664 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/664">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten overige producten GGZ</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1856"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/665 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/665">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten generalistische basis GGZ</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1857"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/670 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/670">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van geriatrische revalidatiezorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1880"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/680 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/680">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van kraamzorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1901"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/700 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/700">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Overige kosten</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2301"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2302"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2303"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2304"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2305"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2306"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2307"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2308"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/701 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/701">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van overige geneeskundige zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2309"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/702 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/702">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van zorg zintuiglijk gehandicapten</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2310"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/720 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/720">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van grensoverschrijdende zorg</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2001"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2002"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2003"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2005"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2006"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2007"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/730 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/730">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Kosten van kwaliteitsgelden</rdfs:label>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2101"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/890.1 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/890.1">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Opbrengsten verhaal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/910 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/910">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Schade t.l.v. het vrijwillig eigen risico van verzekerden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/915 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/915">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Schade t.l.v. van het verplicht eigen risico van verzekerden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/920 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/920">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Schade afhandelingskosten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.zinl.nl/ontologie/ZINL_Kostencode/930 -->
+
+    <owl:Class rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/930">
+        <rdfs:subClassOf rdf:resource="https://www.zinl.nl/ontologie/ZINL_Kostencode"/>
+        <rdfs:label>Prudentiemarge balanspost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie#bestand_2015_gem -->
+
+    <owl:NamedIndividual rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie#bestand_2015_gem">
+        <rdf:type rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B1"/>
+        <ontologie:P2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologie:P2>
+        <ontologie:p1>https://www.vektis.nl/uploads/Docs%20per%20pagina/Open%20Data%20Bestanden/Gemeentebestanden%202011-2016/Vektis%20Open%20Databestand%20Zorgverzekeringswet%202015%20-%20gemeente.csv</ontologie:p1>
+        <ontologie:p3>1-1-2019</ontologie:p3>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie#bestand_2016_gem -->
+
+    <owl:NamedIndividual rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie#bestand_2016_gem">
+        <rdf:type rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B1"/>
+        <ontologie:P2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologie:P2>
+        <ontologie:p1>https://www.vektis.nl/uploads/Docs%20per%20pagina/Open%20Data%20Bestanden/Gemeentebestanden%202011-2016/Vektis%20Open%20Databestand%20Zorgverzekeringswet%202016%20-%20gemeente.csv</ontologie:p1>
+        <ontologie:p3>1-1-2019</ontologie:p3>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/bestand_2015_pc3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/bestand_2015_pc3">
+        <rdf:type rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B2"/>
+        <ontologie:P2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologie:P2>
+        <ontologie:p1>https://www.vektis.nl/uploads/Docs%20per%20pagina/Open%20Data%20Bestanden/Oud/Vektis%20Open%20Databestand%20Zorgverzekeringswet%202015%20-%20postcode3.csv</ontologie:p1>
+        <ontologie:p3>1-6-2017</ontologie:p3>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.vektis.nl/intelligence/open-data/ontologie/bestand_2016_pc3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/bestand_2016_pc3">
+        <rdf:type rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/B2"/>
+        <ontologie:P2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologie:P2>
+        <ontologie:p1>https://www.vektis.nl/uploads/Docs%20per%20pagina/Open%20Data%20Bestanden/Vektis%20Open%20Databestand%20Zorgverzekeringswet%202016%20-%20postcode3.csv</ontologie:p1>
+        <ontologie:p3>1-6-2018</ontologie:p3>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/562">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1305"/>
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1301"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/612.1">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/612.2">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1501"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/650.1">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1803"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/663">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1855"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/671">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/1881"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.zinl.nl/ontologie/ZINL_Kostencode/721">
+        <bevat_BASIC_code rdf:resource="https://www.vektis.nl/intelligence/open-data/ontologie/Codelijst/Basic/2008"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K01"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K02"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K03"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K04"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K05"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K06"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K07"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K08"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K09"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K10"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K11"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K12"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K13"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K14"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K15"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K17"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K18"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K19"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K20"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K21"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K22"/>
+            <rdf:Description rdf:about="https://www.vektis.nl/intelligence/open-data/ontologie/K23"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

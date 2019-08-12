@@ -1,13 +1,14 @@
 from flask import Flask, Response, request
 import json
-import rdflib
-
-app = Flask('FAIR Searchbox')
+from RepositoryManager import RepositoryManager
 
 # Init configuration file
 configFile = open("config.json")
 config = json.load(configFile)
 configFile.close()
+
+app = Flask('FAIR Searchbox')
+repoManager = RepositoryManager(config["rdfDataFiles"])
 
 @app.route('/')
 def index():
