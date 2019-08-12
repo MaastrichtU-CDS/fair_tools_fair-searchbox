@@ -33,3 +33,30 @@ class RepositoryManager:
             } ORDER BY DESC(?classLocation)
         """ % text)
         return queryResult
+
+    def searchForUri(self, uri):
+        queryResult = self.graph.query("""
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+            SELECT DISTINCT ?class ?classLabel ?classComment ?classLocation
+            WHERE {
+                ?class rdfs:label ?classLabel.
+
+                OPTIONAL {
+                    ?class ?outPredicate ?outObject.
+                    OPTIONAL{ ?outPredicate rdfs:label ?outPredicateLabel. }.
+                    OPTIONAL{ ?outObject rdfs:label ?outObjectLabel. }.
+                }.
+
+                OPTIONAL {
+                    ?inObject ?inPredicate ?class.
+                    OPTIONAL{ ?inPredicate rdfs:label ?inPredicateLabel. }.
+                    OPTIONAL{ ?inObject rdfs:label ?inObjectLabel. }.
+                }
+
+                BIND (<%s> AS ?class).
+            }
+        """ % uri)
+        return queryResult
