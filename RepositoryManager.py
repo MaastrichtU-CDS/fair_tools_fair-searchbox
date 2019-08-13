@@ -59,7 +59,7 @@ class RepositoryManager:
             OPTIONAL{ ?outPredicate rdfs:label ?outPredicateLabel. }.
             OPTIONAL{ ?outObject rdfs:label ?outObjectLabel. }.
             BIND (isIRI(?outObject) AS ?outObjectIRI).
-        }
+        } ORDER BY ?outPredicate
         """ % uri)
         return queryResult
     def getReferencingObjects(self, uri):
@@ -68,13 +68,13 @@ class RepositoryManager:
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-        SELECT DISTINCT ?inPredicate ?inPredicateLabel ?inObject ?inObjectLabel
+        SELECT DISTINCT ?inPredicate ?inPredicateLabel ?inObject ?inObjectLabel ?inObjectIRI
         WHERE {
             BIND (<%s> AS ?object).
             ?inObject ?inPredicate ?object.
             OPTIONAL{ ?inPredicate rdfs:label ?inPredicateLabel. }.
             OPTIONAL{ ?inObject rdfs:label ?inObjectLabel. }.
             BIND (isIRI(?inObject) AS ?inObjectIRI).
-        }
+        } ORDER BY ?inPredicate
         """ % uri)
         return queryResult
