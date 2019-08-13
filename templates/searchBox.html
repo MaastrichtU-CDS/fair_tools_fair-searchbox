@@ -19,7 +19,7 @@
             </tr>
             {% for term in termList %}
             <tr>
-                <td><a href="./?uri={{ term.class }}">{{ term.classLabel }}</a></td>
+                <td><a href="./?uri={{ term.class | urlencode }}">{{ term.classLabel }}</a></td>
                 <td>{{ term.classComment }}</td>
                 <td>{{ term.classLocation }}</td>
             </tr>
