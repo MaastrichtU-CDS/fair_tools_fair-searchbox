@@ -5,7 +5,10 @@ class RepositoryManager:
         self.graph = self.rdflib.Graph()
 
         for rdfFile in rdfFileList:
-            self.graph.parse(rdfFile)
+            try:
+                self.graph.parse(rdfFile)
+            except:
+                print("Could not load %s - is the file reachable? Ignoring for now." % rdfFile)
     
     def searchForText(self, text):
         queryResult = self.graph.query("""
@@ -18,13 +21,7 @@ class RepositoryManager:
             WHERE {
                 ?class rdfs:label ?classLabel.
 
-                {
-                    ?class rdfs:label ?searchText.
-                } UNION {
-                    ?class rdfs:comment ?searchText.
-                } UNION {
-                    ?class vektis:Open_Data_Locatie ?searchText.
-                }
+                ?class ?predicate ?searchText.
 
                 OPTIONAL {?class rdfs:comment ?classComment}.
                 OPTIONAL {?class vektis:Open_Data_Locatie ?classLocation}.
@@ -40,23 +37,44 @@ class RepositoryManager:
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-            SELECT DISTINCT ?class ?classLabel ?classComment ?classLocation
+            SELECT DISTINCT ?object ?objectLabel ?objectType ?objectTypeLabel
             WHERE {
-                ?class rdfs:label ?classLabel.
-
-                OPTIONAL {
-                    ?class ?outPredicate ?outObject.
-                    OPTIONAL{ ?outPredicate rdfs:label ?outPredicateLabel. }.
-                    OPTIONAL{ ?outObject rdfs:label ?outObjectLabel. }.
-                }.
-
-                OPTIONAL {
-                    ?inObject ?inPredicate ?class.
-                    OPTIONAL{ ?inPredicate rdfs:label ?inPredicateLabel. }.
-                    OPTIONAL{ ?inObject rdfs:label ?inObjectLabel. }.
-                }
-
-                BIND (<%s> AS ?class).
+                BIND (<%s> AS ?object).
+                ?object rdf:type ?objectType.
+                OPTIONAL { ?object rdfs:label ?objectLabel. }.
+                OPTIONAL { ?objectType rdfs:label ?objectTypeLabel. }.
             }
+        """ % uri)
+        return queryResult
+    def getPropertiesForUri(self, uri):
+        queryResult = self.graph.query("""
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+        SELECT DISTINCT ?outPredicate ?outPredicateLabel ?outObject ?outObjectLabel ?outObjectLiteral
+        WHERE {
+            BIND (<%s> AS ?object).
+            ?object ?outPredicate ?outObject.
+            OPTIONAL{ ?outPredicate rdfs:label ?outPredicateLabel. }.
+            OPTIONAL{ ?outObject rdfs:label ?outObjectLabel. }.
+            BIND (isIRI(?outObject) AS ?outObjectIRI).
+        }
+        """ % uri)
+        return queryResult
+    def getReferencingObjects(self, uri):
+        queryResult = self.graph.query("""
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+        SELECT DISTINCT ?inPredicate ?inPredicateLabel ?inObject ?inObjectLabel
+        WHERE {
+            BIND (<%s> AS ?object).
+            ?inObject ?inPredicate ?object.
+            OPTIONAL{ ?inPredicate rdfs:label ?inPredicateLabel. }.
+            OPTIONAL{ ?inObject rdfs:label ?inObjectLabel. }.
+            BIND (isIRI(?inObject) AS ?inObjectIRI).
+        }
         """ % uri)
         return queryResult

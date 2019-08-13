@@ -14,6 +14,7 @@ repoManager = RepositoryManager(config["rdfDataFiles"])
 def index():
     if "uri" in request.args:
         return showUri(request.args.get("uri"))
+    
     return render_template("index.html")
 
 @app.route('/', methods=["POST"])
@@ -24,8 +25,18 @@ def searchResult():
     return render_template("searchBox.html", searchTerm=data["searchField"], termList=results)
 
 def showUri(uri):
-    results = repoManager.searchForUri(uri)
-    print(uri)
-    return uri
+    uriResults = repoManager.searchForUri(uri)
+    propertiesResults = repoManager.getPropertiesForUri(uri)
+    referencingResults = repoManager.getReferencingObjects(uri)
+
+    returnObj = { }
+    for uriResult in uriResults:
+        returnObj["object"] = uriResult.object
+        returnObj["objectLabel"] = uriResult.objectLabel
+        returnObj["objectType"] = uriResult.objectType
+        returnObj["objectTypeLabel"] = uriResult.objectTypeLabel
+        break
+    
+    return render_template("uriShow.html", uriInfo=returnObj, propertyList=propertiesResults, propertyListIn=referencingResults)
 
 app.run(debug=True, host='0.0.0.0', port=5000)

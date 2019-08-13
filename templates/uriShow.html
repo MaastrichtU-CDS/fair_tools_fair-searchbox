@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>FAIR Searchbox</title>
+    </head>
+
+    <body>
+        <p><a href="./">Back to Search</a></p>
+        <h2>Object information</h2>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>{{ uriInfo.objectLabel }}</td>
+            </tr>
+            <tr>
+                <td>URI:</td>
+                <td>{{ uriInfo.object }}</td>
+            </tr>
+            <tr>
+                <td>Type:</td>
+                {% if uriInfo.objectTypeLabel %}
+                <td><a href="./?uri={{ uriInfo.objectType }}">{{ uriInfo.objectTypeLabel }}</a></td>
+                {% else %}
+                <td><a href="./?uri={{ uriInfo.objectType }}">{{ uriInfo.objectType }}</a></td>
+                {% endif %}
+            </tr>
+        </table>
+        
+        <br/><br/>
+
+        <h3>Properties</h3>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            {% for property in propertyList %}
+            <tr>
+                {% if property.outPredicateLabel %}
+                <td><a href="./?uri={{ property.outPredicate }}">{{ property.outPredicateLabel }}</a></td>
+                {% else %}
+                <td><a href="./?uri={{ property.outPredicate }}">{{ property.outPredicate }}</a></td>
+                {% endif %}
+
+                {% if property.outObjectLabel %}
+                <td><a href="./?uri={{ property.outObject }}">{{ property.outObjectLabel }}</a></td>
+                {% else %}
+                {% if property.outObjectIRI %}
+                <td><a href="./?uri={{ property.outObject }}">{{ property.outObject }}</a></td>
+                {% else %}
+                <td>{{ property.outObject }}</td>
+                {% endif %}
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br/><br/><br/>
+
+        <h3>Refering to this object</h3>
+        <table>
+            <tr>
+                <th>Object</th>
+                <th>Property</th>
+            </tr>
+            {% for property in propertyListIn %}
+            <tr>
+                {% if property.inObjectLabel %}
+                <td><a href="./?uri={{ property.inObject }}">{{ property.inObjectLabel }}</a></td>
+                {% else %}
+                {% if property.inObjectIRI %}
+                <td><a href="./?uri={{ property.inObject }}">{{ property.inObject }}</a></td>
+                {% else %}
+                <td>{{ property.inObject }}</td>
+                {% endif %}
+                {% endif %}
+
+                {% if property.inPredicateLabel %}
+                <td><a href="./?uri={{ property.inPredicate }}">{{ property.inPredicateLabel }}</td>
+                {% else %}
+                <td><a href="./?uri={{ property.inPredicate }}">{{ property.inPredicate }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
