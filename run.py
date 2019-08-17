@@ -59,4 +59,4 @@ def showUri(uri):
     
     return render_template("uriShow.html", uriInfo=returnObj, propertyList=propertiesResults, propertyListIn=referencingResults)
 
-app.run(debug=True, host='0.0.0.0', port=5000)
+app.run(debug=True, host='0.0.0.0', port=5050)
