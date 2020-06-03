@@ -14,14 +14,10 @@
         <table>
             <tr>
                 <th>Term</th>
-                <th>Comment</th>
-                <th>Location</th>
             </tr>
             {% for term in termList %}
             <tr>
-                <td><a href="./?uri={{ term.class | urlencode }}">{{ term.classLabel }}</a></td>
-                <td>{{ term.classComment }}</td>
-                <td>{{ term.classLocation }}</td>
+                <td><a href="./?uri={{ term.class | urlencode }}">{{ term.matchedText }}</a></td>
             </tr>
             {% endfor %}
         </table>

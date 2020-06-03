@@ -5,10 +5,11 @@ class RepositoryManager:
         self.graph = self.rdflib.Graph()
 
         for rdfFile in rdfFileList:
-            try:
-                self.graph.parse(rdfFile)
-            except:
-                print("Could not load %s - is the file reachable? Ignoring for now." % rdfFile)
+
+            if "format" in rdfFile:
+                self.graph.parse(rdfFile["location"], format=rdfFile["format"])
+            else:
+                self.graph.parse(rdfFile["location"])
     
     def searchForText(self, text):
         queryResult = self.graph.query("""
@@ -17,17 +18,12 @@ class RepositoryManager:
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-            SELECT DISTINCT ?class ?classLabel ?classComment ?classLocation
+            SELECT DISTINCT ?class ?searchText
             WHERE {
-                ?class rdfs:label ?classLabel.
-
                 ?class ?predicate ?searchText.
 
-                OPTIONAL {?class rdfs:comment ?classComment}.
-                OPTIONAL {?class vektis:Open_Data_Locatie ?classLocation}.
-
                 FILTER(REGEX(?searchText, ".*%s.*", "i")).
-            } ORDER BY DESC(?classLocation)
+            } ORDER BY DESC(?class)
         """ % text)
         return queryResult
 

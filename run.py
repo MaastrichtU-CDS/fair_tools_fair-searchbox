@@ -11,6 +11,16 @@ configFile.close()
 app = Flask('FAIR Searchbox')
 repoManager = RepositoryManager(config["rdfDataFiles"])
 
+@app.route("/reload")
+def reload():
+    # Init configuration file
+    configFile = open("config.json")
+    config = json.load(configFile)
+    configFile.close()
+
+    app = Flask('FAIR Searchbox')
+    repoManager = RepositoryManager(config["rdfDataFiles"])
+
 @app.route('/')
 def index():
     if "uri" in request.args:
@@ -27,10 +37,8 @@ def searchResult():
     for result in results:
         myResult = {
             "class": result["class"],
-            "classLabel": result["classLabel"],
-            "classComment": result["classComment"],
-            "classLocation": result["classLocation"],
-            "distance": distance.get_jaro_distance(data["searchField"], result["classLabel"], winkler=True)
+            "matchedText": result["searchText"],
+            "distance": distance.get_jaro_distance(data["searchField"], result["searchText"], winkler=True)
         }
         myResults.append(myResult)
     
@@ -39,10 +47,7 @@ def searchResult():
     return render_template("searchBox.html", searchTerm=data["searchField"], termList=myResults)
 
 def calculateResultScore(myResult):
-    number = 0
-    if myResult["classLocation"] is not None:
-        number = 1
-    return number + myResult["distance"]
+    return myResult["distance"]
 
 def showUri(uri):
     uriResults = repoManager.searchForUri(uri)
