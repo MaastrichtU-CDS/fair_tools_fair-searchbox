@@ -33,7 +33,10 @@ def catch_all(path):
         uriContentsResult = repoManager.getPropertiesForUri(uri)
         outputString = ""
         for uriResult in uriContentsResult:
-            outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
+            if uriResult["outObjectIRI"]=="true":
+                outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
+            else:
+                outputString += ("<%s> <%s> \"%s\"." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
             outputString += "\n"
         return Response(outputString, mimetype=accept)
     
