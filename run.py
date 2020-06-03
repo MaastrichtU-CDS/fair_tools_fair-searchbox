@@ -23,29 +23,21 @@ def reload():
 
 @app.route('/<path:path>')
 def catch_all(path):
-    accept = "text/html"
+    accept = "application/turtle"
     uri = config["baseUri"] + path
 
     if "Accept" in request.headers:
         accept = str(request.headers["Accept"])
     
-    if accept == "application/turtle" or accept == "text/turtle":
-        uriContentsResult = repoManager.getPropertiesForUri(uri)
-        outputString = ""
-        for uriResult in uriContentsResult:
-            if uriResult["outObjectIRI"]=="true":
-                outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
-            else:
-                outputString += ("<%s> <%s> \"%s\"." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
-            outputString += "\n"
-        return Response(outputString, mimetype=accept)
+    if accept == "text/html" or accept == "application/xhtml+xml":
+        return showUriHtml(uri)
     
-    return showUri(uri)
+    return showUriTurtle(uri)
 
 @app.route('/')
 def index():
     if "uri" in request.args:
-        return showUri(request.args.get("uri"))
+        return showUriHtml(request.args.get("uri"))
     
     return render_template("index.html")
 
@@ -70,7 +62,7 @@ def searchResult():
 def calculateResultScore(myResult):
     return myResult["distance"]
 
-def showUri(uri):
+def showUriHtml(uri):
     uriResults = repoManager.searchForUri(uri)
     propertiesResults = repoManager.getPropertiesForUri(uri)
     referencingResults = repoManager.getReferencingObjects(uri)
@@ -84,5 +76,16 @@ def showUri(uri):
         break
     
     return render_template("uriShow.html", uriInfo=returnObj, propertyList=propertiesResults, propertyListIn=referencingResults)
+
+def showUriTurtle(uri):
+    uriContentsResult = repoManager.getPropertiesForUri(uri)
+    outputString = ""
+    for uriResult in uriContentsResult:
+        if uriResult["outObjectIRI"]=="true":
+            outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
+        else:
+            outputString += ("<%s> <%s> \"%s\"." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
+        outputString += "\n"
+    return Response(outputString, mimetype="application/turtle")
 
 app.run(debug=True, host='0.0.0.0', port=5050)
