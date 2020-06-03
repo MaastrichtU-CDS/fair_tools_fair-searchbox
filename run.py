@@ -81,7 +81,7 @@ def showUriTurtle(uri):
     uriContentsResult = repoManager.getPropertiesForUri(uri)
     outputString = ""
     for uriResult in uriContentsResult:
-        if uriResult["outObjectIRI"]=="true":
+        if uriResult["outObjectIRI"]:
             outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
         else:
             outputString += ("<%s> <%s> \"%s\"." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
