@@ -23,7 +23,21 @@ def reload():
 
 @app.route('/<path:path>')
 def catch_all(path):
-    return showUri(config["baseUri"] + path)
+    accept = "text/html"
+    uri = config["baseUri"] + path
+
+    if "Accept" in request.headers:
+        accept = str(request.headers["Accept"])
+    
+    if accept == "application/turtle" or accept == "text/turtle":
+        uriContentsResult = repoManager.getPropertiesForUri(uri)
+        outputString = ""
+        for uriResult in uriContentsResult:
+            outputString += ("<%s> <%s> <%s>." % (uri, uriResult["outPredicate"], uriResult["outObject"]))
+            outputString += "\n"
+        return Response(outputString, mimetype=accept)
+    
+    return showUri(uri)
 
 @app.route('/')
 def index():
