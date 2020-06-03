@@ -21,6 +21,10 @@ def reload():
     app = Flask('FAIR Searchbox')
     repoManager = RepositoryManager(config["rdfDataFiles"])
 
+@app.route('/<path:path>')
+def catch_all(path):
+    return showUri(config["baseUri"] + path)
+
 @app.route('/')
 def index():
     if "uri" in request.args:

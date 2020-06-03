@@ -36,16 +36,16 @@
             {% for property in propertyList %}
             <tr>
                 {% if property.outPredicateLabel %}
-                <td><a href="./?uri={{ property.outPredicate | urlencode }}">{{ property.outPredicateLabel }}</a></td>
+                <td><a href="/?uri={{ property.outPredicate | urlencode }}">{{ property.outPredicateLabel }}</a></td>
                 {% else %}
-                <td><a href="./?uri={{ property.outPredicate | urlencode }}">{{ property.outPredicate }}</a></td>
+                <td><a href="/?uri={{ property.outPredicate | urlencode }}">{{ property.outPredicate }}</a></td>
                 {% endif %}
 
                 {% if property.outObjectLabel %}
-                <td><a href="./?uri={{ property.outObject | urlencode }}">{{ property.outObjectLabel }}</a></td>
+                <td><a href="/?uri={{ property.outObject | urlencode }}">{{ property.outObjectLabel }}</a></td>
                 {% else %}
                 {% if property.outObjectIRI %}
-                <td><a href="./?uri={{ property.outObject | urlencode }}">{{ property.outObject }}</a></td>
+                <td><a href="/?uri={{ property.outObject | urlencode }}">{{ property.outObject }}</a></td>
                 {% else %}
                 <td>{{ property.outObject }}</td>
                 {% endif %}
@@ -65,19 +65,19 @@
             {% for property in propertyListIn %}
             <tr>
                 {% if property.inObjectLabel %}
-                <td><a href="./?uri={{ property.inObject | urlencode }}">{{ property.inObjectLabel }}</a></td>
+                <td><a href="/?uri={{ property.inObject | urlencode }}">{{ property.inObjectLabel }}</a></td>
                 {% else %}
                 {% if property.inObjectIRI %}
-                <td><a href="./?uri={{ property.inObject | urlencode }}">{{ property.inObject }}</a></td>
+                <td><a href="/?uri={{ property.inObject | urlencode }}">{{ property.inObject }}</a></td>
                 {% else %}
                 <td>{{ property.inObject }}</td>
                 {% endif %}
                 {% endif %}
 
                 {% if property.inPredicateLabel %}
-                <td><a href="./?uri={{ property.inPredicate | urlencode }}">{{ property.inPredicateLabel }}</td>
+                <td><a href="/?uri={{ property.inPredicate | urlencode }}">{{ property.inPredicateLabel }}</td>
                 {% else %}
-                <td><a href="./?uri={{ property.inPredicate | urlencode }}">{{ property.inPredicate }}</td>
+                <td><a href="/?uri={{ property.inPredicate | urlencode }}">{{ property.inPredicate }}</td>
                 {% endif %}
             </tr>
             {% endfor %}
